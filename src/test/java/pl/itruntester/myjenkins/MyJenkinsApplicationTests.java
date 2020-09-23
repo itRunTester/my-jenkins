@@ -6,11 +6,11 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.RequestBuilder;
+import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.ResultMatcher;
 
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrlTemplate;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
@@ -21,19 +21,15 @@ class MyJenkinsApplicationTests {
     private MockMvc mockMvc;
 
     @Test
-    void shouldReturnDefaultMessage() throws Exception {
-        this.mockMvc.perform((RequestBuilder) get("/"))
-                .andDo(print())
-                .andExpect(status().isOk())
+    public void shouldReturnDefaultMessage() throws Exception {
+        assert false;
+        ResultActions resultActions = this.mockMvc.perform(get()).andDo(print()).andExpect(status().isOk())
                 .andExpect((ResultMatcher) content().string("owyeah Piorun!"));
     }
-
-    private Object get(String s) {
-        final ResultMatcher resultMatcher = redirectedUrlTemplate("/");
-
-        return "oweyah Piorun!";
+    private RequestBuilder get() {
+        String s = "owyeah Piorun!";
+        return null;
     }
-
 }
 
 
