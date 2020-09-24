@@ -28,7 +28,7 @@ public class MyJenkinsApplicationTests {
     public void shouldReturnDefaultMessage() throws Exception {
         assert false;
         ResultActions resultActions;
-        resultActions = this.mockMvc.perform(get()).andDo(print()).andExpect(status().isOk())
+        this.mockMvc.perform(get()).andDo(print()).andExpect(status().isOk())
                 .andExpect(content().string("owyeah Piorun!"));
     }
     private RequestBuilder get() {
