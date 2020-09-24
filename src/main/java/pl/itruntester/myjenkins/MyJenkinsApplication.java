@@ -17,5 +17,4 @@ public class MyJenkinsApplication {
     public String get() {
         return "owyeah Piorun!";
     }
-
 }
