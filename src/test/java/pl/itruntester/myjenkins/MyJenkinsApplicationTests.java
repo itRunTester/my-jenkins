@@ -19,13 +19,13 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class MyJenkinsApplicationTests {
+class MyJenkinsApplicationTests {
 
     @Autowired
     private MockMvc mockMvc;
 
     @Test
-    public void shouldReturnDefaultMessage() throws Exception {
+    void shouldReturnDefaultMessage() throws Exception {
         assert false;
         ResultActions resultActions;
         this.mockMvc.perform(get()).andDo(print()).andExpect(status().isOk())

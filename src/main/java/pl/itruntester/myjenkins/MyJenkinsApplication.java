@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MyJenkinsApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(MyJenkinsApplication.class, args);
-    }
+    public static void main(String[] args) { SpringApplication.run(MyJenkinsApplication.class, args); }
 
     @GetMapping
     public String get() {
