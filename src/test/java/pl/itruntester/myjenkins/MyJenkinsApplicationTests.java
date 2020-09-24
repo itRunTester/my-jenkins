@@ -26,11 +26,11 @@ class MyJenkinsApplicationTests {
 
     @Test
     void shouldReturnDefaultMessage() throws Exception {
-        this.mockMvc.perform(get()).andDo(print()).andExpect(status().isOk())
+        ResultActions expect = this.mockMvc.perform(get())
+                .andDo(print())
+                .andExpect(status().isOk())
                 .andExpect(content().string("owyeah Piorun!"));
     }
-    private RequestBuilder get() {
-        String s = "owyeah Piorun!";
-        return null;
-    }
+
 }
+
