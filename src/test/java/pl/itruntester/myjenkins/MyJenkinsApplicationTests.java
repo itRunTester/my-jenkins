@@ -23,7 +23,7 @@ class MyJenkinsApplicationTests {
         this.mockMvc.perform(MockMvcRequestBuilders.get("/"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content().string("owyeah Piorun!"));
+                .andExpect(content().string("Dziubasku, idziemy spać!"));
     }
 
 }
