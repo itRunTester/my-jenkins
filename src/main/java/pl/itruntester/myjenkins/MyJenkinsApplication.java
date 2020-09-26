@@ -13,6 +13,6 @@ public class MyJenkinsApplication {
 
     @GetMapping
     public String get() {
-        return "Dziubasku, idziemy spać!";
+        return "Pizza Django Developer - Ucz się!!!";
     }
 }
